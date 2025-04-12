@@ -43,13 +43,24 @@ After 3 hours of test/debug back-and-forth with Claude, this is the end product.
 1. Python 3.12.10
 2. Node.js 22.14.0
 3. npm 11.3.0
-4. uv 0.6.14 (uv is a Python project and package manager. [More info here.](https://docs.astral.sh/uv/))
+4. npx 11.3.0
+5. uv 0.6.14 (uv is a Python project and package manager. [More info here.](https://docs.astral.sh/uv/))
 
 ### Instructions
+**Note:** I'm pretty good with Python, but an absolute novice with Node.js.  So, I'm making a lot of assumptions about npm/npx and probably doing bad things.
 
-1. Clone this repository
-2. From the kanban-api directory, run `uv run main.py`
-3. From the kanban-app directory, run `npm start`
+Clone this repo:
 
-**Note:** I'm pretty good with Python, but an absolute novice with Node.js.  So, I'm assuming that npm will handle all the dependencies for you.  Also, worth mentioning, Claude had to use flag `--legacy-peer-deps` when running `npm install` for several packages.
+```
+git clone https://github.com/chalvorson/kanban.git
+```
 
+**Python part:**
+1. From the kanban-api directory, run `uv run main.py`
+
+**React part:** YMMV
+1. Move the kanban-app directory to a temp location
+2. Run `npx create-react-app kanban-app`
+3. Copy contents (/public, /src, package.json, package-lock.json) of original kanban-app directory into the new kanban-app directory
+4. From the kanban-app directory, run `npm install --legacy-peer-deps`
+5. From the kanban-app directory, run `npm start`
