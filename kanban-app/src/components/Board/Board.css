@@ -1,0 +1,28 @@
+.board-container {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.board {
+  min-height: calc(100vh - 160px);
+  padding-bottom: 16px;
+}
+
+/* Custom scrollbar for horizontal scrolling */
+.board::-webkit-scrollbar {
+  height: 8px;
+}
+
+.board::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.board::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.board::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

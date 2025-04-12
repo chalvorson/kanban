@@ -1,0 +1,30 @@
+.column {
+  margin: 0 8px;
+}
+
+.task-list {
+  transition: background-color 0.2s ease;
+}
+
+.task-list.dragging-over {
+  background-color: rgba(144, 202, 249, 0.2);
+}
+
+/* Custom scrollbar */
+.task-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.task-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.task-list::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
